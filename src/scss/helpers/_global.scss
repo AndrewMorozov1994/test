@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: local("poppins"),
+       local("poppins-semibold"),
+       url("../fonts/poppins.woff2") format("woff2"),
+       url("../fonts/poppins.woff") format("woff"),
+       url("../fonts/poppins-semibold.woff2") format("woff2"),
+       url("../fonts/poppins-semibold.woff") format("woff");
+}
+
+body {
+  font-weight: 400;
+  font-family: "poppins";
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: unset;
+}

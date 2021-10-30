@@ -1,0 +1,10 @@
+@import "helpers/normalize";
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/global";
+@import "../blocks/header/header.scss";
+@import "../blocks/navigation/navigation";
+@import "../blocks/button/button";
+@import "../blocks/presentation/presentation";
+@import "../blocks/reviews/reviews";
+@import "../blocks/pins/pins";

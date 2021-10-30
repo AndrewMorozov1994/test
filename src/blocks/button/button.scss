@@ -1,0 +1,89 @@
+.button {
+    @include reset;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    display: block;
+
+    &--blue {
+        background-color: $blue;
+        width: 130px;
+        border-radius: 30px;
+        border: 1px solid transparent;
+    }
+
+    &--nav {
+        font-size: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid #eff3f8;
+        position: relative;
+        margin: 10px;
+        cursor: pointer;
+
+        svg {
+            fill: #eff3f8;
+            position: absolute;
+            stroke: #eff3f8;
+            stroke-width: 1px;
+            top: 18px;
+            left: 15px;
+            transition: 0.3s;
+        }
+    }
+
+    &--next {
+        position: relative;
+        transform: rotate(180deg);
+
+        &::before {
+            @include pseudo;
+
+            position: absolute;
+            height: 30px;
+            width: 2px;
+            top: 7px;
+            left: 57px;
+            background-color: #eff3f8;
+        }
+    }
+}
+
+@media(min-width: $tablet) {
+    .button {
+        &--blue {
+            margin: 0;
+        }
+    }
+}
+
+@media(min-width: $desktop) {
+    .button {
+        &--blue {
+            width: 170px;
+            padding: 19px;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: white;
+                color: $blue;
+                border: 1px solid $blue;
+            }
+        }
+
+        &--nav {
+            transition: 0.3s;
+
+            &:hover {
+                background-color: #eff3f8;
+
+                svg {
+                    fill: $blue;
+                    stroke: $blue;
+                    
+                }
+            }
+        }
+    }
+}

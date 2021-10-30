@@ -1,0 +1,25 @@
+//reset list styles
+@mixin list-reset {
+  padding-left: 0;
+  list-style: none;
+}
+
+//container 1170px
+@mixin page-wrapper {
+  padding-right: calc(50% - 585px);
+  padding-left: calc(50% - 585px);
+}
+
+@mixin pseudo() {
+  content: "";
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin reset() {
+  padding: 0;
+  background: transparent;
+  border: none;
+  appearance: none;
+}

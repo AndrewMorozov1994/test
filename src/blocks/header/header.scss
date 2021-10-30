@@ -1,0 +1,109 @@
+.header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    font-size: 14px;
+}
+
+.header__logo {
+    img {
+        width: 90px;
+    }
+}
+
+.header__burger {
+    font-size: 0;
+    position: relative;
+    @include reset;
+
+    pointer-events: visible;
+    cursor: pointer;
+    height: 20px;
+
+    span {
+        display: block;
+        width: 35px;
+        height: 2px;
+        background-color: black;
+        transition: 0.3s;
+    }
+
+    &::before,
+    &::after {
+        @include pseudo;
+
+        position: absolute;
+        width: 35px;
+        height: 2px;
+        background-color: black;
+        transition: 0.3s;
+        top: 0;
+    }
+
+    &::after {
+        top: auto;
+        bottom: 0;
+    }
+
+    &--opened {
+        span {
+            opacity: 0;
+        }
+
+        &::before {
+            transform: rotate(-45deg) translate(-8px, 7px);
+        }
+
+        &::after {
+            transform: rotate(45deg) translate(-6px, -5px);
+        }
+    }
+}
+
+.header__nav-wrapper {
+    display: none;
+
+    &--open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: white;
+        width: 100%;
+        top: 70px;
+        left: 0;
+        padding: 20px;
+        box-shadow: 0 10px 5px 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media(min-width: $tablet) {
+    .header__logo {
+        img {
+            width: 100px;
+            margin-top: 8px;
+        }
+    }
+    .header__nav-wrapper {
+        display: flex;
+    }
+
+    .header__burger {
+        display: none;
+    }
+}
+
+@media(min-width: $desktop) {
+    .header {
+        @include page-wrapper;
+        font-size: 16px;
+        padding-top: 52px;
+    }
+
+    .header__logo {
+        img {
+            width: 117px;
+            margin-top: 15px;
+        }
+    }
+}

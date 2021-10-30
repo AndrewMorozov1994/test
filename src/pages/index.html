@@ -1,0 +1,11 @@
+<%= _.template(require('./../blocks/head/head.html'))() %>
+    <body>
+        <%= _.template(require('./../blocks/header/header.html'))() %>
+        <main>
+            <h1 style="font-size: 0;">Test</h1>
+            <%= _.template(require('./../blocks/presentation/presentation.html'))() %>
+            <%= _.template(require('./../blocks/reviews/reviews.html'))() %>
+        </main>
+        <script src="js/bundle.js"></script>
+    </body>
+</html>
